@@ -120,15 +120,7 @@
   .flow div { border: 1px solid var(--line); background: var(--surface-2); border-radius: 8px; padding: 8px 14px; font-size: 14px; font-weight: 600; text-align: center; }
   .flow i { text-align: center; color: var(--muted); font-style: normal; font-size: 13px; line-height: 1; }
 
-  /* timeline */
-  .timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
-  .timeline li { position: relative; padding: 0 0 22px 24px; }
-  .timeline li::before { content: ""; position: absolute; left: -7px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
-  .timeline .when { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
-  .timeline .what { font-weight: 600; }
-  .timeline .detail { color: var(--muted); font-size: 14px; }
-
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; align-items: start; }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; }
   .card h3 { margin: 0 0 12px; font-size: 18px; }
   .card dl { margin: 0; }
@@ -161,7 +153,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#publication">Publication</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#achievements">Achievements</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -227,7 +219,6 @@
     <article class="project">
       <div class="project-head">
         <h3>A Multi-Head Attention-Based TimesNet for Heat Production Planning Under Unknown Future Demands</h3>
-        <span class="date">2025.11</span>
       </div>
       <p class="org">MDPI Energies · 제1저자</p>
       <span class="highlight">운영비용 5.93% 절감 · 정확도 3.01%p 향상</span>
@@ -276,7 +267,6 @@
     <article class="project">
       <div class="project-head">
         <h3>취업 여부와 학력 간의 관계 분석</h3>
-        <span class="date">2024.11</span>
       </div>
       <p class="org">동국대학교 WISE캠퍼스 빅데이터응용통계학과 졸업논문</p>
       <div class="grid single">
@@ -307,7 +297,6 @@
     <article class="project">
       <div class="project-head">
         <h3>보험 경험조정 분석 AX</h3>
-        <span class="date">2026.08 – 2026.10</span>
       </div>
       <p class="org">예실차 원인분석과 리포팅 자동화</p>
       <div class="grid">
@@ -352,7 +341,6 @@
     <article class="project">
       <div class="project-head">
         <h3>산학협력단 과제–연구자 추천 시스템</h3>
-        <span class="date">2025.07</span>
       </div>
       <p class="org">NTIS 공고 요약 → 연구자 DB 매칭 → Top-K 추천</p>
       <span class="highlight">한국전자거래학회 공모전 장려상</span>
@@ -392,7 +380,6 @@
     <article class="project">
       <div class="project-head">
         <h3>한국불교유산 특화 LLM/RAG 시스템</h3>
-        <span class="date">2025.06</span>
       </div>
       <p class="org">불교학술원 · 도메인 데이터 구조화와 Hybrid Retrieval</p>
       <div class="grid">
@@ -431,7 +418,6 @@
     <article class="project">
       <div class="project-head">
         <h3>의료·바이오 논문 Results 자동작성</h3>
-        <span class="date">2025.11</span>
       </div>
       <p class="org">(주)유진바이오소프트 · Figure + 통계결과 기반 RAG 문서자동화</p>
       <div class="grid">
@@ -465,7 +451,6 @@
     <article class="project">
       <div class="project-head">
         <h3>K-하이테크 교육과정 추천 시스템</h3>
-        <span class="date">2025.11</span>
       </div>
       <p class="org">한국공학대학교 K-하이테크 사업단 · 기업 DX 진단정보 기반 맞춤형 교육과정 추천</p>
       <div class="grid">
@@ -477,7 +462,7 @@
           </ul>
           <h4>데이터 구축</h4>
           <ul>
-            <li>2022~2025년 수행일지·훈련결과·만족도·현업적용도 약 130건 활용</li>
+            <li>수행일지·훈련결과·만족도·현업적용도 약 130건 활용</li>
             <li>과정명·동의어·연도별 문항 정규화 및 기업정보 익명화</li>
             <li>기업 프로필·DX 수준·기술수요·제약조건을 표준 스키마로 구성</li>
           </ul>
@@ -498,47 +483,37 @@
   </div>
 </section>
 
-<section id="timeline">
+<section id="achievements">
   <div class="wrap">
-    <h2>Timeline &amp; Achievements</h2>
-    <p class="sub">학력 · 수상 · 활동</p>
+    <h2>Achievements</h2>
+    <p class="sub">수상 · 활동 · 학력</p>
     <div class="two-col">
-      <ol class="timeline">
-        <li><div class="when">2019.03</div><div class="what">동국대학교 WISE캠퍼스 입학</div><div class="detail">빅데이터응용통계학과</div></li>
-        <li><div class="when">2024.11</div><div class="what">졸업논문 — 취업 여부와 학력 간의 관계 분석</div><div class="detail">KGSS 패널 데이터 22,070건 · 로지스틱 회귀</div></li>
-        <li><div class="when">2025.03</div><div class="what">동국대학교 산업시스템공학과 석사과정 입학</div></li>
-        <li><div class="when">2025.06</div><div class="what">한국불교유산 특화 LLM 시스템 구축</div><div class="detail">불교학술원</div></li>
-        <li><div class="when">2025.07</div><div class="what">산학협력단 과제–연구자 매칭 추천 시스템</div></li>
-        <li><div class="when">2025.07 – 2025.11</div><div class="what">"생성형 AI로 생활 속 효율성 높이기" 강의 조교</div><div class="detail">강남구청 · 수업 자료 제작 및 진행 보조</div></li>
-        <li><div class="when">2025.11</div><div class="what">MDPI Energies 논문 게재 (제1저자)</div></li>
-        <li><div class="when">2025.11</div><div class="what">의료 논문 초안 작성 시스템 · K-하이테크 교육과정 추천 시스템</div></li>
-        <li><div class="when">2025.11.29</div><div class="what">한국전자거래학회 학술대회 및 공모전 장려상 2건</div></li>
-        <li><div class="when">2026.08</div><div class="what">보험 경험조정 분석 AX — Rule 시계열 · 동일계약 Bridge 원인분석</div><div class="detail">월별 Rule 지속성 분석, 전월→당월 계약 속성 변화 추적, 조기탐지 실행 패키지 구성, PoC 샘플 보고서 작성</div></li>
-        <li><div class="when">2026.08 – 09</div><div class="what">직접 구현 탑다운(A3) · 파티션 트리 · 변수 사전선별</div><div class="detail">LightGBM Gain 기반 분할 직접 구현, 다중 모델(RF/XGB/SHAP) 변수 중요도 비교</div></li>
-        <li><div class="when">2026.09</div><div class="what">원천 Parquet 전처리 엔진 · Case 레버변수 분석 보고서 자동화</div><div class="detail">파생변수·비닝·전월 대비 변수 생성 파이프라인, Excel/Word 보고서 자동 생성</div></li>
-        <li><div class="when">2026.09 – 10</div><div class="what">필터 EDA · 통계검증 · 레버변수 발굴 · 원인분석 통합 보고서</div><div class="detail">Agent 연동 시각화 확장, 뎁스변수 기반 원인분석 정리</div></li>
-      </ol>
-      <div>
-        <div class="card">
-          <h3>Awards</h3>
-          <dl>
-            <dt>한국전자거래학회 장려상 · 2025.11.29</dt>
-            <dd>미래수요 불확실성 하에서의 열 생산 계획을 위한 다중헤드 어텐션 기반 타임즈넷</dd>
-            <dt>한국전자거래학회 공모전 장려상 · 2025.11.29</dt>
-            <dd>연구원 맞춤 과제 추천 서비스</dd>
-            <dt>성적 우수 장학 · 동국대학교 WISE캠퍼스</dt>
-            <dd>2019-2학기, 2022-2학기, 2023-1학기, 2023-2학기</dd>
-          </dl>
-        </div>
-        <div class="card" style="margin-top:16px">
-          <h3>Education</h3>
-          <dl>
-            <dt>동국대학교 산업시스템공학과 석사과정</dt>
-            <dd>GPA 4.5 / 4.5</dd>
-            <dt>동국대학교 WISE캠퍼스 빅데이터응용통계학과 (학사)</dt>
-            <dd>GPA 3.53 / 4.5</dd>
-          </dl>
-        </div>
+      <div class="card">
+        <h3>Awards</h3>
+        <dl>
+          <dt>한국전자거래학회 장려상</dt>
+          <dd>미래수요 불확실성 하에서의 열 생산 계획을 위한 다중헤드 어텐션 기반 타임즈넷</dd>
+          <dt>한국전자거래학회 공모전 장려상</dt>
+          <dd>연구원 맞춤 과제 추천 서비스</dd>
+          <dt>성적 우수 장학</dt>
+          <dd>동국대학교 WISE캠퍼스 · 4회</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>Activities</h3>
+        <dl>
+          <dt>"생성형 AI로 생활 속 효율성 높이기" 강의 조교</dt>
+          <dd>강남구청 · 수업 자료 제작 및 진행 보조</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>Education</h3>
+        <dl>
+          <dt>동국대학교 산업시스템공학과 석사과정</dt>
+          <dd>GPA 4.5 / 4.5</dd>
+          <dt>동국대학교 WISE캠퍼스 빅데이터응용통계학과 (학사)</dt>
+          <dd>GPA 3.53 / 4.5</dd>
+        </dl>
       </div>
     </div>
   </div>
